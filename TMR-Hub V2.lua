@@ -1,6 +1,46 @@
 --< Booting Library >--
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Cerbiale/TMR-Hub/main/TMRHub-Library.lua"))()
 
+local Player = game:GetService('Players').LocalPlayer
+
+game:GetService('ReplicatedStorage').raceInProgress.Changed:Connect(function()
+
+	if _G.AR == true then		if game:GetService('ReplicatedStorage').raceInProgress.Value == true then
+
+			game:GetService('ReplicatedStorage').rEvents.raceEvent:FireServer("joinRace")
+
+		end
+
+	end
+
+end)
+
+game:GetService('ReplicatedStorage').raceStarted.Changed:Connect(function()
+
+	if _G.AR == true then
+
+		if game:GetService('ReplicatedStorage').raceStarted.Value == true then
+
+			for i, v in pairs(game:GetService('Workspace').raceMaps:GetChildren()) do
+
+				local OldFinishPosition = v.finishPart.CFrame
+
+				v.finishPart.CFrame = Player.Character.HumanoidRootPart.CFrame
+
+				wait()
+
+				v.finishPart.CFrame = OldFinishPosition
+
+			end
+
+		end
+
+		wait(2)
+
+	end
+
+end)
+
 local Window = Library:Window("TMR-Hub [V2]","",Enum.KeyCode.RightControl);
 
 local Tab1 = Window:Tab("Main", "")
