@@ -121,7 +121,7 @@ Tab1:Toggle("Auto Race",false,function(state)
  game:GetService("ReplicatedStorage"):WaitForChild("rEvents"):WaitForChild("tradingEvent"):FireServer(unpack(args)) 
   
  end) 
- Tab1:Line()
+ 
  Tab1:Seperator("Main City") 
  Tab1:Toggle("Yellow Orbs",false,function(state)
  if state then 
@@ -261,7 +261,7 @@ game:GetService('ReplicatedStorage').rEvents.orbEvent:FireServer("collectOrb", "
             _G.loop = false 
          end 
  end) 
- Tab1:Line()
+ 
  
  Tab1:Seperator("Snow City") 
  Tab1:Toggle("Yellow Orbs",false,function(state) 
