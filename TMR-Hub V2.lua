@@ -15,14 +15,14 @@ local Tab9 = Window:Tab("Teleports", "")
 local Tab10 = Window:Tab("Settings", "")
 
 Tab1:Seperator("Universal")
-Tab1:Toggle("Auto Race",false,false,false,function(state) 
+Tab1:Toggle("Auto Race",false,function(state)
  if state then 
              _G.AR = true 
          else 
              _G.AR = false 
          end 
  end) 
- Tab1:Toggle("Auto Rebirth",false,false,false,function(state) 
+ Tab1:Toggle("Auto Rebirth",false,function(state)
  if state then 
             _G.loop = true 
             while _G.loop == true do wait() 
@@ -32,7 +32,7 @@ Tab1:Toggle("Auto Race",false,false,false,function(state)
             _G.loop = false 
          end 
  end) 
- Tab1:Toggle("Auto Hoops V1",false,false,false,function(state) 
+ Tab1:Toggle("Auto Hoops V1",false,function(state)
  if state then 
             _G.loop = true 
             while _G.loop == true do wait() 
@@ -46,7 +46,7 @@ Tab1:Toggle("Auto Race",false,false,false,function(state)
             _G.loop = false 
          end 
  end) 
- Tab1:Toggle("Auto Hoops V2",false,false,false,function(state) 
+ Tab1:Toggle("Auto Hoops V2",false,function(state)
  if state then 
             _G.loop = true 
             while _G.loop == true do wait() 
@@ -83,7 +83,7 @@ Tab1:Toggle("Auto Race",false,false,false,function(state)
  end) 
  Tab1:Line()
  Tab1:Seperator("Main City") 
- Tab1:Toggle("Yellow Orbs",false,false,false,function(state) 
+ Tab1:Toggle("Yellow Orbs",false,function(state)
  if state then 
             _G.loop = true 
             while _G.loop == true do wait() 
@@ -101,7 +101,7 @@ Tab1:Toggle("Auto Race",false,false,false,function(state)
             _G.loop = false 
          end 
  end) 
- Tab1:Toggle("Orange Orbs",false,false,false,function(state) 
+ Tab1:Toggle("Orange Orbs",false,function(state)
  if state then 
             _G.loop = true 
             while _G.loop == true do wait() 
@@ -143,7 +143,7 @@ wait(0.4)
             _G.loop = false 
          end 
  end) 
- Tab1:Toggle("Blue Orbs",false,false,false,function(state) 
+ Tab1:Toggle("Blue Orbs",false,function(state)
  if state then 
             _G.loop = true 
             while _G.loop == true do wait() 
@@ -185,7 +185,7 @@ wait(0.4)
             _G.loop = false 
          end 
  end) 
- Tab1:Toggle("Red Orbs",false,false,false,function(state) 
+ Tab1:Toggle("Red Orbs",false,function(state)
  if state then 
             _G.loop = true 
             while _G.loop == true do wait() 
@@ -203,7 +203,7 @@ wait(0.4)
             _G.loop = false 
          end 
  end) 
- Tab1:Toggle("Gems",false,false,false,function(state) 
+ Tab1:Toggle("Gems",false,function(state)
  if state then 
             _G.loop = true 
             while _G.loop == true do wait() 
@@ -224,7 +224,7 @@ game:GetService('ReplicatedStorage').rEvents.orbEvent:FireServer("collectOrb", "
  Tab1:Line()
  
  Tab1:Seperator("Snow City") 
- Tab1:Toggle("Yellow Orbs",false,false,function(state) 
+ Tab1:Toggle("Yellow Orbs",false,function(state) 
  if state then 
             _G.loop = true 
             while _G.loop == true do wait() 
@@ -242,7 +242,7 @@ wait(0.4)
             _G.loop = false 
          end 
  end) 
- Tab1:Toggle("Orange Orbs",false,false,function(state) 
+ Tab1:Toggle("Orange Orbs",false,function(state) 
  if state then 
             _G.loop = true 
             while _G.loop == true do wait() 
@@ -255,7 +255,7 @@ game:GetService('ReplicatedStorage').rEvents.orbEvent:FireServer("collectOrb", "
             _G.loop = false 
          end 
  end) 
- Tab1:Toggle("Blue Orbs",false,false,function(state) 
+ Tab1:Toggle("Blue Orbs",false,function(state) 
  if state then 
             _G.loop = true 
             while _G.loop == true do wait() 
@@ -297,7 +297,7 @@ wait(0.4)
             _G.loop = false 
          end 
  end) 
- Tab1:Toggle("Red Orbs",false,false,function(state) 
+ Tab1:Toggle("Red Orbs",false,function(state) 
  if state then 
             _G.loop = true 
             while _G.loop == true do wait() 
@@ -315,7 +315,7 @@ wait(0.4)
             _G.loop = false 
          end 
  end) 
- Tab1:Toggle("Gems",false,false,function(state) 
+ Tab1:Toggle("Gems",false,function(state) 
  if state then 
             _G.loop = true 
             while _G.loop == true do wait() 
@@ -335,7 +335,7 @@ wait(0.4)
  end) 
  
  Tab1:Seperator("Magma City") 
- Tab1:Toggle("Yellow Orbs",false,false,function(state) 
+ Tab1:Toggle("Yellow Orbs",false,function(state) 
  if state then 
             _G.loop = true 
             while _G.loop == true do wait() 
@@ -353,7 +353,7 @@ wait(0.4)
             _G.loop = false 
          end 
  end) 
- Tab1:Toggle("Orange Orbs",false,false,function(state) 
+ Tab1:Toggle("Orange Orbs",false,function(state) 
  if state then 
             _G.loop = true 
             while _G.loop == true do wait() 
@@ -395,7 +395,7 @@ wait(0.4)
             _G.loop = false 
          end 
  end) 
- Tab1:Toggle("Blue Orbs",false,false,function(state) 
+ Tab1:Toggle("Blue Orbs",false,function(state) 
  if state then 
             _G.loop = true 
             while _G.loop == true do wait() 
@@ -437,7 +437,7 @@ wait(0.4)
             _G.loop = false 
          end 
  end) 
- Tab1:Toggle("Red Orbs",false,false,function(state) 
+ Tab1:Toggle("Red Orbs",false,function(state) 
  if state then 
             _G.loop = true 
             while _G.loop == true do wait() 
@@ -455,7 +455,7 @@ wait(0.4)
             _G.loop = false 
          end 
  end) 
- Tab1:Toggle("Gems",false,false,function(state) 
+ Tab1:Toggle("Gems",false,function(state) 
  if state then 
             _G.loop = true 
             while _G.loop == true do wait() 
@@ -476,7 +476,7 @@ wait(0.4)
  
  
  Tab2:Seperator("Space")
-Tab2:Toggle("Yellow Orbs (x50)",false,false,function(state)
+Tab2:Toggle("Yellow Orbs (x50)",false,function(state)
 if state then
            _G.loop = true
            while _G.loop == true do wait()
@@ -494,7 +494,7 @@ wait(0.4)
            _G.loop = false
         end
 end)
-Tab2:Toggle("Orange Orbs",false,false,function(state) 
+Tab2:Toggle("Orange Orbs",false,function(state) 
  if state then 
             _G.loop = true 
             while _G.loop == true do wait() 
@@ -536,7 +536,7 @@ wait(0.4)
             _G.loop = false 
          end 
  end) 
- Tab2:Toggle("Blue Orbs",false,false,function(state) 
+ Tab2:Toggle("Blue Orbs",false,function(state) 
  if state then 
             _G.loop = true 
             while _G.loop == true do wait() 
@@ -578,7 +578,7 @@ wait(0.4)
             _G.loop = false 
          end 
  end) 
-Tab2:Toggle("Red Orbs (x50)",false,false,function(state)
+Tab2:Toggle("Red Orbs (x50)",false,function(state)
 if state then
            _G.loop = true
            while _G.loop == true do wait()
@@ -597,7 +597,7 @@ wait(0.4)
            _G.loop = false
         end
 end)
-Tab2:Toggle("Gems (x50)",false,false,function(state)
+Tab2:Toggle("Gems (x50)",false,function(state)
 if state then
            _G.loop = true
            while _G.loop == true do wait()
@@ -617,7 +617,7 @@ wait(0.4)
 end)
 
 Tab2:Seperator("Desert")
-Tab2:Toggle("Yellow Orbs (x50)",false,false,function(state)
+Tab2:Toggle("Yellow Orbs (x50)",false,function(state)
 if state then
            _G.loop = true
            while _G.loop == true do wait()
@@ -635,7 +635,7 @@ wait(0.4)
            _G.loop = false
         end
 end)
-Tab2:Toggle("Orange Orbs",false,false,function(state) 
+Tab2:Toggle("Orange Orbs",false,function(state) 
  if state then 
             _G.loop = true 
             while _G.loop == true do wait() 
@@ -677,7 +677,7 @@ wait(0.4)
             _G.loop = false 
          end 
  end) 
- Tab2:Toggle("Blue Orbs",false,false,function(state) 
+ Tab2:Toggle("Blue Orbs",false,function(state) 
  if state then 
             _G.loop = true 
             while _G.loop == true do wait() 
@@ -719,7 +719,7 @@ wait(0.4)
             _G.loop = false 
          end 
  end) 
-Tab2:Toggle("Red Orbs (x50)",false,false,function(state)
+Tab2:Toggle("Red Orbs (x50)",false,function(state)
 if state then
            _G.loop = true
            while _G.loop == true do wait()
@@ -737,7 +737,7 @@ wait(0.4)
            _G.loop = false
         end
 end)
-Tab2:Toggle("Gems (x50)",false,false,function(state)
+Tab2:Toggle("Gems (x50)",false,function(state)
 if state then
            _G.loop = true
            while _G.loop == true do wait()
